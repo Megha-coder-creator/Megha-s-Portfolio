@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megha's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: rgb(2, 2, 48);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+
+
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 70px;
+            background-color: rgb(38, 38, 70);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: rgb(170, 170, 255);
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 40px 20px;
+
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+
+        }
+
+        .firstsection>div {
+            width: 40%;
+        }
+
+        .leftsection {
+            font-size: 2.5rem;
+            margin: 30px 0;
+        }
+
+        .rightsection img {
+            width: 420px;
+            height: auto;
+            margin-top: 30px;
+            background: transparent;
+            filter: drop-shadow(0 0 25px rgba(168,85,247,0.35));
+            transition: all 0.3s ease;
+
+        }
+        .rightsection img:hover{
+            transform: translateY(-8px);
+        }
+
+        .purple {
+            color: rgb(127, 102, 150);
+        }
+
+        .text-gray {
+            color: gray;
+            display: block;
+        }
+
+        #element {
+            color: rgb(127, 102, 150);
+
+        }
+
+        .secondsection {
+            max-width: 80vw;
+            margin: auto;
+            padding: 0 60px;
+            padding-top: 25px;
+            padding-bottom: 250px;
+        }
+
+        .secondsection h1 {
+            font-size: 1.9rem;
+            ;
+        }
+
+        .secondsection .box {
+            background: white;
+            height: 2px;
+            width: 100%;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondsection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 90px;
+        }
+
+        .image-top {
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 160px;
+            left: -40px;
+            font-size: 16px;
+            ;
+
+
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 160px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            left: -30px;
+
+        }
+
+        footer {
+            background-color: #0e0e1a;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 25px 0;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 250px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: rgb(179, 174, 174);
+            padding: 12px 0;
+        }
+
+        .skills {
+            max-width: 80vw;
+            margin: 80px auto;
+        }
+
+        .skills h1 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .skills-container {
+            background: rgba(255,255,255,0.1);
+            padding: 12px 20px;
+            border-radius: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .skill {
+            background: rgb(38, 38, 70);
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+
+        .projects {
+            max-width: 80vw;
+            margin: 80px auto;
+            text-align: center;
+        }
+
+        .projects h1 {
+            font-size: 2rem;
+            text-align: center;
+            width: 100%;
+            display: block;
+            margin: 0 auto 30px auto;
+        }
+
+        .project-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .project-card {
+            width: 300px;
+            background: rgb(38, 38, 70);
+            padding: 20px;
+            border-radius: 10px;
+            transition: 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 20px rgba(127, 102, 150, 0.4);
+        }
+
+        .about-line {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 40px 20px;
+        }
+
+        .about {
+            max-width: 80vw;
+            margin: 60px auto;
+        }
+
+        .about h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgb(190, 190, 190);
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: rgb(127, 102, 150);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .contact{
+            margin-top: 60px;
+        }
+        .contact a{
+            color:white;
+            text-decoration: none;
+        }
+        .contact a:hover{
+            color: white;
+            text-decoration: underline;
+        }
+        .certificates{
+            margin:20px auto;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+        .certificate-container{
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .certificate-card{
+            width: 240px;
+            padding: 20px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+        .certificate-card a{
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background: #6c63ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .certificate-card:hover{
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(100,149,255,0.4);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Megha's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Certificates">Certificates</a></li>
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="#Contact">Contact </a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+    </header>
+    <main>
+        <section class="firstsection" id="Home">
+            <div class="leftsection">Hi, My name is <span class="purple">Megha</span>
+                <div>And I am a passionate</div>
+                <span id="element"></span>
+                <br><br>
+                <a href="resume.pdf" download class="btn">
+                    Download Resume
+                </a>
+
+            </div>
+            <div class="rightsection">
+                <img src="me.png" alt="Profile Image">
+
+            </div>
+
+        </section>
+        <hr>
+    </main>
+    <section class="about" id="About">
+        <h1>About Me</h1>
+        <p>
+            I'm a B.Tech CSE student passionate about web development ,Python ,Data Analysis and Artificial
+            Intelligence.</p>
+        <p>
+            I'm also a Data Structures and Algorithms Enthusiast, I enjoy solving real world day to day life problems
+            using my technical skills.
+        </p>
+    </section>
+    <hr class="about-line">
+    <section class="skills">
+        <h1>SKILLS</h1>
+        <div class="skills-container">
+            <div class="skill-box">HTML</div>
+            <div class="skill-box">CSS</div>
+            <div class="skill-box">JavaScript</div>
+            <div class="skill-box">Python</div>
+            <div class="skill-box">SQL</div>
+
+        </div>
+
+    </section>
+    <hr>
+    <section class="projects" id="Projects">
+        <h1>Projects</h1>
+        <div class="project-container">
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>Personal Portfolio built using HTML,CSS and JavaScript.</p>
+                <button>View Project</button>
+            </div>
+            <div class="project-card">
+                <h3>Calculator</h3>
+                <p>Simple Calculator performing arithmetic operations.</p>
+                <button>View Project</button>
+            </div>
+            <div class="project-card">
+                <h3>Image Gallery</h3>
+                <p>Responsive image gallery with hover effects.</p>
+                <button>View Project</button>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section class="secondsection">
+        <span class="text-gray">What I have done so far</span>
+        <h1>Learning Experience</h1>
+        <div class="box">
+            <div class="vertical">
+                <img class="image-top" src="html-5.png" alt="">
+                <div class="vertical-title">
+                    C++ Developer (Mar 2024)
+                </div>
+                <div class="vertical-desc">
+                    Learnt C and C++ and worked on projects to build real life problem solving skills
+                </div>
+            </div>
+            <div class="vertical">
+                <img class="image-top" src="html-5.png" alt="">
+                <div class="vertical-title">
+                    Dsa in C++ (Sept 2024)
+                </div>
+                <div class="vertical-desc">
+                    Learnt dsa from basic to advanced and practiced solving problems
+                </div>
+            </div>
+            <div class="vertical">
+                <img class="image-top" src="html-5.png" alt="">
+                <div class="vertical-title">
+                    Python Developer (Feb 2025)
+                </div>
+                <div class="vertical-desc">
+                    Learnt Python programming language and worked on projects
+                </div>
+            </div>
+            <div class="vertical"> <img class="image-top" src="html-5.png" alt="">
+                <div class="vertical-title">
+                    Frontend Developer (August 2025)
+                </div>
+                <div class="vertical-desc">
+                    Building things using html,css and javascript
+
+                </div>
+            </div>
+            <div class="vertical"> <img class="image-top" src="html-5.png" alt="">
+                <div class="vertical-title">
+                    OOP with Java (2026)
+                </div>
+                <div class="vertical-desc">
+                    Familiar with basic java and object oriented programming
+
+                </div>
+            </div>
+            <div class="vertical"> <img class="image-top" src="html-5.png" alt="">
+                <div class="vertical-title">
+                    Data Analyst(2026)
+                </div>
+                <div class="vertical-desc">
+                    Proficient in sql,python and tableau. Love working with data and handling it
+                </div>
+            </div>
+            <div class="vertical"> <img class="image-top" src="html-5.png" alt="">
+                <div class="vertical-title">
+                    Gen AI(2026)
+                </div>
+                <div class="vertical-desc">
+                    Learning Artificial Intelligence,Machine Learning and prompt engineering
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+    <section class="certificates" id="Certificates">
+        <h1>Certificates</h1>
+        <div class="certificate-container">
+            <div class="certificate-card">
+                <h3>Data Science</h3>
+                <p>Completed this course from Infosys</p>
+                <a href="ds.jpeg" target="_blank">
+                    View Certificate
+                </a>
+            </div>
+            <div class="certificate-card">
+                <h3>Learn JavaScript</h3>
+                <p>Completed the course from Codechef</p>
+                <a href="js.jpeg" target="_blank">
+                    View Certificate
+                </a>
+            </div>
+            <div class="certificate-card">
+                <h3>Introduction to Artificial Intelligence</h3>
+                <p>Completed from Skillup</p>
+                <a href="ai.jpeg" target="_blank">
+                    View Certificate
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="Contact">
+        <h1>Contact Me</h1>
+        <div class="contact-box">
+            <p>📧 Email:
+                <a href="mailto:meghabhardwaj1112@gmail.com">
+                    meghabhardwaj1112@gmail.com</a>
+            </p>
+            <p>💼 LinkedIn:
+                <a href="https://www.linkedin.com/in/megha-bhardwaj-3a4239306?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                    target="_blank">
+                    Visit Profile</a>
+
+            </p>
+            <p>🐙 GitHub:
+                <a href="https://github.com/Megha-coder-creator" target="_blank">
+                    🐙Github Profile</a>
+            </p>
+            <p>📱 Phone:
+                <a href="tel:+91 88731 55861">
+                    +91 88731 55861
+                </a>
+            </p>
+        </div>
+    </section>
+
+    </main>
+    <hr>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3> Megha's Developer Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+             &#169; 2026 Megha's Portfolio | All rights reserved.
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: [' Web Developer.'],
+            typeSpeed: 50,
+        });
+    </script>
+
+</body>
+
+</html>
